@@ -1,8 +1,7 @@
 BMP085 Class
  
 DESCRIPTION:
-    This class is used to interface the Arduino with the BMP085 digital
-    barometric pressure sensor.
+	This class is used to interface the Arduino with the BMP085 digital barometric pressure sensor.
 
 FILES:
     BMP085.h
@@ -22,19 +21,14 @@ PUBLIC METHODS:
         Initializes the device. Must be done before device can be used.
  
     void setOSS(int value);
-	    Sets the oversampling setting. See BMP085 documentation for how this
-	    affects sampling time, current draw, and RMS noise. Default value is set
-	    to 3.
-            value - must be an integer between 0 and 3.
+        Sets the oversampling setting. See BMP085 documentation for how this affects sampling time, current draw, and RMS noise. Default value is set to 3.
+                value - must be an integer between 0 and 3.
  
     int getOSS();
         Gets the current oversampleing setting.
  
     void setSamplingTime(int value);
-        Sets the minimum update rate of the device in milliseconds. Minimum
-        update time for temperature is 1000 and minimum for pressure is set by
-        current oversampling setting. See documentation for values. Default
-        value is 1000.
+        Sets the minimum update rate of the device in milliseconds. Minimum update time for temperature is 1000 and minimum for pressure is set by current oversampling setting. See documentation for values. Default value is 1000.
  
     int getSamplingTime();
         Gets current sampling time in milliseconds.
