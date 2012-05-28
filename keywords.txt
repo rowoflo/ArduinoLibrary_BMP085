@@ -1,0 +1,29 @@
+#######################################
+# Syntax Coloring Map for BMP085
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+BMP085	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+initialize	KEYWORD2
+setOSS	KEYWORD2
+getOSS	KEYWORD2
+setSamplingTime	KEYWORD2
+getSamplingTime	KEYWORD2
+temperature	KEYWORD2
+pressure	KEYWORD2
+altitude	KEYWORD2
+calibrateWithAlt	KEYWORD2
+calibrateWithPres	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
