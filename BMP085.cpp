@@ -3,7 +3,7 @@
  BMP085.cpp
  BMP085 Project
  
- Initially created by Rowland O'Flaherty on 8/5/11.
+ Initially created by Rowland O'Flaherty (rowlandoflaherty.com) on 8/5/11.
  www.rowlandoflaherty.com
  
  Version 1.0
