@@ -1,7 +1,7 @@
 BMP085 Class
  
 DESCRIPTION:
-This class is used to interface the Arduino with the BMP085 digital barometric pressure sensor.
+	This class is used to interface the Arduino with the BMP085 digital barometric pressure sensor.
 
 FILES:
     BMP085.h
