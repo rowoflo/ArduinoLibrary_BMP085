@@ -4,7 +4,6 @@
  BMP085 Project
  
  Initially created by Rowland O'Flaherty (rowlandoflaherty.com) on 8/5/11.
- www.rowlandoflaherty.com
  
  Version 1.0
  -------------------------------------------------------------------------------
@@ -53,22 +52,6 @@ BMP085::BMP085(const BMP085& srcObj)
     copyHelper(srcObj);
 }
 
-// Assignment operator
-const BMP085& BMP085::operator=(const BMP085& rhsObj) {
-    // Self-assignment check
-    if (this == &rhsObj)
-    {
-        return (*this);
-    }
-
-    // Free old memory
-
-    // Copy new memory
-    copyHelper(rhsObj);
-
-    return (*this);
-}
-
 // Copy helper function
 void BMP085::copyHelper(const BMP085& srcObj) {
     _AC1 = srcObj._AC1;
@@ -102,6 +85,21 @@ void BMP085::copyHelper(const BMP085& srcObj) {
 // Overloaded Operators
 //------------------------------------------------------------------------------
 
+// Assignment operator
+const BMP085& BMP085::operator=(const BMP085& rhsObj) {
+    // Self-assignment check
+    if (this == &rhsObj)
+    {
+        return (*this);
+    }
+    
+    // Free old memory
+    
+    // Copy new memory
+    copyHelper(rhsObj);
+    
+    return (*this);
+}
 
 //------------------------------------------------------------------------------
 // Public Member Functions
@@ -182,11 +180,6 @@ void BMP085::calibrateWithPres(long pres0) {
     updateTemperature();
     updatePressure();
 }
-
-//------------------------------------------------------------------------------
-// Protected Member Functions
-//------------------------------------------------------------------------------
-
 
 //------------------------------------------------------------------------------
 // Private Member Functions

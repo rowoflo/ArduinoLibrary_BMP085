@@ -11,10 +11,10 @@ USAGE:
     See BMP085.h header file for class information.
 
 NOTES:
-    If running on an Arduino that orperates at 5V (e.g. UNO) it is recommended
+    If running on an Arduino that operates at 5V (e.g. UNO) it is recommended
     to use a logic level converter for the I2C interface because the sensor
-    runs at 3.3V. However, it has been found that hooking that the sensor
-    operates normally if it is hooked up directly.
+    runs at 3.3V. However, it has been found that the sensor operates normally
+    if it is hooked up directly to the Arduino.
  
 EXAMPLES:
     Example 1: Initializing sensor and printing current temperature, pressure,

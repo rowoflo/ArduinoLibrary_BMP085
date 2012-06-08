@@ -19,9 +19,7 @@
     Wire.h
  
  CONSTRUCTORS:
-    BMP085();    
- 
- PUBLIC PROPERTIES:
+    BMP085();
  
  PUBLIC METHODS:
     void initialize();
@@ -65,18 +63,20 @@
  NOTES:
  
  EXAMPLES:
-     ---------------------------------------------------------------------------
-     #include <Arduino.h>
-     #include <BMP085.h>
-     BMP085 bmp;
-     void setup() {
-         Serial.begin(9600);
-         bmp.initialize();
-         Serial.print(bmp.temperature(),2);
-         Serial.print(bmp.pressure());
-         Serial.print(bmp.altitude(),2);
-     }
-     ---------------------------------------------------------------------------
+    Example 1: Initializing sensor and printing current temperature, pressure,
+    and altitude.
+    ----------------------------------------------------------------------------
+    #include <Arduino.h>
+    #include <BMP085.h>
+    BMP085 bmp;
+    void setup() {
+        Serial.begin(9600);
+        bmp.initialize();
+        Serial.print(bmp.temperature(),2);
+        Serial.print(bmp.pressure());
+        Serial.print(bmp.altitude(),2);
+    }
+    ----------------------------------------------------------------------------
  
  VERSIONS:
     1.0 - 8/5/11 - Rowland O'Flaherty (rowlandoflaherty.com)
@@ -92,19 +92,9 @@
 //------------------------------------------------------------------------------
 #include <Arduino.h>
 
-class BMP085
-{
-    //--------------------------------------------------------------------------
-    // Friends
-    //--------------------------------------------------------------------------
-
-
-    //--------------------------------------------------------------------------
-    // Friend Overloaded Operators
-    //--------------------------------------------------------------------------
-
+class BMP085 {
 	
-    public:
+public:
     //--------------------------------------------------------------------------
     // Constants, Enums, and Types
     //--------------------------------------------------------------------------
@@ -123,14 +113,12 @@ class BMP085
     // Copy constructor
     BMP085(const BMP085& srcObj);
 
-    // Assignment operator
-    const BMP085& operator=(const BMP085& rhsObj);
-
-
     //--------------------------------------------------------------------------
     // Overloaded Operators
     //--------------------------------------------------------------------------
-
+    // Assignment operator
+    const BMP085& operator=(const BMP085& rhsObj);
+    
 
     //--------------------------------------------------------------------------
     // Public Member Functions
@@ -146,24 +134,7 @@ class BMP085
     void calibrateWithAlt(float alt0);
     void calibrateWithPres(long pres0);
 
-    //--------------------------------------------------------------------------
-    // Public Member Variables
-    //--------------------------------------------------------------------------
-
-
-    protected:
-    //--------------------------------------------------------------------------
-    // Protected Member Functions
-    //--------------------------------------------------------------------------
-
-
-    //--------------------------------------------------------------------------
-    // Protected Member Variables
-    //--------------------------------------------------------------------------
-
-
-
-    private:
+private:
     //--------------------------------------------------------------------------
     // Lifecycle
     //--------------------------------------------------------------------------
