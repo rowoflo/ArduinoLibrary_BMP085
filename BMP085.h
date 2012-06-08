@@ -21,7 +21,7 @@
  CONSTRUCTORS:
     BMP085();
  
- PUBLIC METHODS:
+ METHODS:
     void initialize();
         Initializes the device. Must be done before device can be used.
  
@@ -72,9 +72,9 @@
     void setup() {
         Serial.begin(9600);
         bmp.initialize();
-        Serial.print(bmp.temperature(),2);
-        Serial.print(bmp.pressure());
-        Serial.print(bmp.altitude(),2);
+        Serial.println(bmp.temperature(),2);
+        Serial.println(bmp.pressure());
+        Serial.println(bmp.altitude(),2);
     }
     ----------------------------------------------------------------------------
  
@@ -118,7 +118,6 @@ public:
     //--------------------------------------------------------------------------
     // Assignment operator
     const BMP085& operator=(const BMP085& rhsObj);
-    
 
     //--------------------------------------------------------------------------
     // Public Member Functions

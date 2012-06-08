@@ -26,9 +26,9 @@ EXAMPLES:
     void setup() {
         Serial.begin(9600);
         bmp.initialize();
-        Serial.print(bmp.temperature(),2);
-        Serial.print(bmp.pressure());
-        Serial.print(bmp.altitude(),2);
+        Serial.println(bmp.temperature(),2);
+        Serial.println(bmp.pressure());
+        Serial.println(bmp.altitude(),2);
     }
     ---------------------------------------------------------------------------
 
